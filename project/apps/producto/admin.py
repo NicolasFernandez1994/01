@@ -4,7 +4,7 @@ from . import models
 
 admin.site.site_title = "Productos"
 
-admin.site.register(models.ProductoCategoriaa)
+# admin.site.register(models.ProductoCategoriaa)
 
 
 @admin.register(models.ProductoCategoriaa)
