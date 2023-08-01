@@ -1,0 +1,20 @@
+{% extends 'producto/index.html' %}
+{% load static %}
+
+{% block INDEX_TITULO %} 
+{% endblock INDEX_TITULO %}
+
+{% block INDEX_CONTENIDO %}
+    {% if objects_list %}
+
+        {% for categoria in objects_list  %}
+            <ul> 
+                <li>{{ categoria.articulo }}</li>
+            </ul>
+            
+        {% endfor %}
+        
+    {% endif %}
+
+    <a href="{% url 'Home:home' %}"> Menu Principal </a>
+{% endblock INDEX_CONTENIDO %}

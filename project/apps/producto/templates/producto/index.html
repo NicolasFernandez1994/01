@@ -39,7 +39,7 @@
                                                 <i class="bi bi-star-fill text-warning"></i>
                                                 Agregar Producto
                                             </div>
-                                            <div class="d-grid"><a class="btn btn-primary" href="#!">...</a></div>
+                                            <div class="d-grid"><a class="btn btn-primary" href= "{% url 'producto:01crear_producto' %}">url >...</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@
                                                 <i class="bi bi-star-fill text-warning"></i>
                                                 Lista Productos
                                             </div>
-                                            <div class="d-grid"><a class="btn btn-primary" href="producto:02lista_productos">...</a></div>
+                                            <div class="d-grid"><a class="btn btn-primary" href="{% url 'producto:02lista_producto' %}">...</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -63,7 +63,7 @@
                                                 <i class="bi bi-star-fill text-warning"></i>
                                                 Menu Principal
                                             </div>
-                                            <div class="d-grid"><a class="btn btn-primary" href="#!">...</a></div>
+                                            <div class="d-grid"><a class="btn btn-primary" href="{% url 'Home:home' %}">...</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -80,5 +80,5 @@
 
     <!-- Crear un producto aqui-->
     <!-- Lista de productos aqui-->
-    <a href="#!"> Menu Principal </a>
+    <a href="{% url 'Home:home' %}"> Menu Principal </a>
 {% endblock INDEX_CONTENIDO %}
