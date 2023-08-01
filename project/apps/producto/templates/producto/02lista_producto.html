@@ -9,7 +9,11 @@
 
         {% for categoria in objects_list  %}
             <ul> 
-                <li>{{ categoria.articulo }}</li>
+                <li>{{ categoria.articulo }}
+                    <a href="{% url 'producto:03detail_producto' categoria.id %}">Ver Detalle</a>
+                    <a href="{% url 'producto:01crear_producto' categoria.id %}">Actualizar Producto</a>
+                    <a href="{% url 'producto:05delete_producto' categoria.id %}">ELIMINAR</a>
+                </li>
             </ul>
             
         {% endfor %}
