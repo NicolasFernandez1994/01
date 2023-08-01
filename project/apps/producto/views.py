@@ -1,6 +1,8 @@
+from msilib.schema import ListView
 from unicodedata import category
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
+from django.views.generic import ListView
 
 from . import models
 from . import forms
@@ -8,9 +10,9 @@ from . import forms
 # Pagina Principal
 
 
-def index(request):
-    contexto = {"app": "Aplicación Producto"}
-    return render(request, "producto/index.html")
+# def index(request):
+# contexto = {"app": "Aplicación Producto"}
+# return render(request, "producto/index.html")
 
 
 # Lista Producto
@@ -18,6 +20,9 @@ def list_product(request):
     categorias = models.ProductoCategoriaa.objects.all()
     context = {"objects_list": categorias}
     return render(request, "producto/02lista_producto.html", context)
+
+#class ProductoCategoriaaList (ListView):
+    #model = models.ProductoCategoriaa
 
 # Crear Producto
 

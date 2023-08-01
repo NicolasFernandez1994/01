@@ -3,8 +3,8 @@ from django.db import models
 
 class ProductoCategoriaa(models.Model):
     """Categoria de productos"""
-    articulo = models.CharField(max_length=70, unique=True)
-    marca = models.CharField(max_length=70, unique=True)
+    articulo = models.CharField(max_length=70,)
+    marca = models.CharField(max_length=70,)
     codigo = models.CharField(max_length=40, null=True, blank=True)
     descripcion = models.CharField(
         max_length=270, null=True, blank=True, verbose_name="descripcion")
