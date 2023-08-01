@@ -1,15 +1,15 @@
 from django.contrib import admin
 
-# from . import models
+from . import models
 
-# admin.site.site_title = "Productos"
+admin.site.site_title = "Productos"
 
-# admin.site.register(models.ProductoCategoria)
+admin.site.register(models.ProductoCategoriaa)
 
 
-# @admin.register(models.ProductoCategoria)
-# class ProductoCategoriaAdmin(admin.ModelAdmin):
-# list_display = ("nombre", "descripcion")
-# list_filter = ("nombre",)
-# search_fields = ("nombre", "descripcion")
-# ordering = ("nombre",)
+@admin.register(models.ProductoCategoriaa)
+class ProductoCategoriaaAdmin(admin.ModelAdmin):
+    list_display = ("articulo", "marca", "codigo", "descripcion")
+    list_filter = ("articulo",)
+    search_fields = ("articulo", "marca")
+    ordering = ("articulo",)

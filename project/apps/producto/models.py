@@ -1,15 +1,17 @@
 from django.db import models
 
 
-#class ProductoCategoria(models.Model):
-    #"""Categoria de productos"""
-    #nombre = models.CharField(max_length=150, unique=True)
-    #descripcion = models.CharField(
-        #max_length=270, null=True, blank=True, verbose_name="descripcion")
+class ProductoCategoriaa(models.Model):
+    """Categoria de productos"""
+    articulo = models.CharField(max_length=70, unique=True)
+    marca = models.CharField(max_length=70, unique=True)
+    codigo = models.CharField(max_length=40, null=True, blank=True)
+    descripcion = models.CharField(
+        max_length=270, null=True, blank=True, verbose_name="descripcion")
 
-    #def __str__(self):
-        #return self.nombre
+    def __str__(self):
+        return self.articulo
 
-    #class Meta:
-        #verbose_name = "Categoria de productos"
-        #verbose_name_plural = "Categorias de productos"
+    class Meta:
+        verbose_name = "Categoria de productoss"
+        verbose_name_plural = "Categorias de productoss"

@@ -1,7 +1,20 @@
+from unicodedata import category
 from django.shortcuts import render
 
-# Create your views here.
+from . import models
 
-def home(request):
-    contexto = {"app": "Aplicación Producto" }
-    return render(request, "producto/index.html", contexto)
+
+# Pagina Principal
+def index(request):
+    contexto = {"app": "Aplicación Producto"}
+    return render(request, "producto/index.html")
+
+# Crear Producto
+
+# Lista Producto
+
+
+def list_product(request):
+    categorias = models.ProductoCategoriaa.objects.all()
+    context = {"objects_list": categorias}
+    return render(request, "producto/02lista_productos.html", context)
