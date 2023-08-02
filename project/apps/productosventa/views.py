@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+def home(request):
+    contexto = {"app": "productosventa"}
+    return render(request, "productosventa/index.html", contexto) #corregir

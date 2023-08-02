@@ -27,4 +27,8 @@ urlpatterns = [
     path("faq/", include("faq.urls")),
     path("Nosotros/", include("Nosotros.urls")),
     path("Nosotros/", include("Nosotros.urls")),
+    path("productoscompra/", include("productoscompra.urls")),
+    path("productosventa/", include("productosventa.urls")),
+    path("work/", include("work.urls")),
+    path("showplus/", include("showplus.urls")),
 ]
