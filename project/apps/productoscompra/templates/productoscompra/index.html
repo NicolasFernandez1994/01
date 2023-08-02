@@ -5,6 +5,118 @@
 {% endblock INDEX_TITULO %}
 
 {% block INDEX_CONTENIDO %}
+    <!DOCTYPE html>
+    <html lang="es">
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+            <meta name="description" content="" />
+            <meta name="author" content="" />
+            <title>Seccion Compras</title>
+            <!-- Favicon-->
+            <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+            <!-- Bootstrap icons-->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+            <!-- Core theme CSS (includes Bootstrap)-->
+            <link href="css/styles.css" rel="stylesheet" />
+        </head>
+        <body class="d-flex flex-column h-100">
+            <main class="flex-shrink-0">
+                <!-- Page Content-->
+                <section class="py-5">
+                    <div class="container px-5 my-5">
+                        <div class="text-center mb-5">
+                            <h1 class="fw-bolder">PRODUCTOS DEL CATALOGO</h1>
+                            <p class="lead fw-normal text-muted mb-0">Los precios mas competitivos del mercado</p>
+                        </div>
+                        <div class="row gx-5">
+                            <div class="col-lg-6">
+                                <div class="position-relative mb-5">
+                                    <img class="img-fluid rounded-3 mb-3" src="{% static 'Home/imagenes/bombadeagua01.jpeg' %}" alt="..." />
+                                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" >Bombas de Aguas / Nuevas y Reparadas </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="position-relative mb-5">
+                                    <img class="img-fluid rounded-3 mb-3" src="{% static 'Home/imagenes/rodamientos01.jpeg' %}" alt="..." />
+                                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" >Rodamientos Rueda/Caja/Maza</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="position-relative mb-5 mb-lg-0">
+                                    <img class="img-fluid rounded-3 mb-3" src="{% static 'Home/imagenes/crucetas01.jpeg' %}" alt="..." />
+                                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" >Tricetas / Crucetas</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="position-relative">
+                                    <img class="img-fluid rounded-3 mb-3" src="{% static 'Home/imagenes/homocineticas01.jpeg' %}" alt="..." />
+                                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" > Homocineticas Rueda/Caja </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="position-relative">
+                                    <img class="img-fluid rounded-3 mb-3" src="{% static 'Home/imagenes/amortiguadores01.jpeg' %}" alt="..." />
+                                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" >Amortiguadores Nuevos / Recambios </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="position-relative">
+                                    <img class="img-fluid rounded-3 mb-3" src="{% static 'Home/imagenes/cazoletas02.jpeg' %}" alt="..." />
+                                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link"> Cazoletas </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="position-relative">
+                                    <img class="img-fluid rounded-3 mb-3" src="{% static 'Home/imagenes/bieleta01.jpeg' %}" alt="..." />
+                                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link"> Bieleta </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="position-relative">
+                                    <img class="img-fluid rounded-3 mb-3" src="{% static 'Home/imagenes/brazorotula01.jpeg' %}" alt="..." />
+                                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" > Brazo Rotula/Parrilla/Extremos </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="position-relative">
+                                    <img class="img-fluid rounded-3 mb-3" src="{% static 'Home/imagenes/embragues01.jpeg' %}" alt="..." />
+                                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" > Kit Embrague </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="position-relative">
+                                    <img class="img-fluid rounded-3 mb-3" src="{% static 'Home/imagenes/correa01.jpeg' %}" alt="..." />
+                                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" > Correas de Distribucion / Kit</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="position-relative">
+                                    <img class="img-fluid rounded-3 mb-3" src="{% static 'Home/imagenes/cajadireccion01.jpeg' %}" alt="..." />
+                                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" > Cajas de Direccion </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="position-relative">
+                                    <img class="img-fluid rounded-3 mb-3" src="{% static 'Home/imagenes/cablebujia01.jpeg' %}" alt="..." />
+                                    <a class="h3 fw-bolder text-decoration-none link-dark stretched-link" > Cable Bujias</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="py-5 bg-light">
+                    <div class="container px-5 my-5">
+                        <h2 class="display-4 fw-bolder mb-4">En el siguiente link encontraras nuestro catalogo con precios</h2>
+                        <a class="btn btn-lg btn-primary" href="https://docs.google.com/spreadsheets/d/1YkHoV5z1Q6impChpSqg9ABCYIWDQp_N5/edit?usp=drive_link&ouid=111968871002839204884&rtpof=true&sd=true">CATALOGO</a>
+                    </div>
+                </section>
+            </main>
+            <!-- Bootstrap core JS-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- Core theme JS-->
+            <script src="js/scripts.js"></script>
+        </body>
+    </html>
 
-    <a href="{% url 'Home:home' %}"> Menu Principal </a>
 {% endblock INDEX_CONTENIDO %}
