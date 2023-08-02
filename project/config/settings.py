@@ -52,6 +52,10 @@ INSTALLED_APPS = [
     'producto',
     'faq',
     'Nosotros',
+    'productoscompra',
+    'productosventa',
+    'showplus',
+    'work',
 ]
 
 MIDDLEWARE = [
