@@ -56,6 +56,9 @@ INSTALLED_APPS = [
     'productosventa',
     'showplus',
     'work',
+    'blog01JM',
+    'blog02EH',
+    'blog03PC',
 ]
 
 MIDDLEWARE = [
