@@ -1,4 +1,3 @@
-from msilib.schema import ListView
 from unicodedata import category
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
@@ -21,8 +20,8 @@ def list_product(request):
     context = {"objects_list": categorias}
     return render(request, "producto/02lista_producto.html", context)
 
-#class ProductoCategoriaaList (ListView):
-    #model = models.ProductoCategoriaa
+# class ProductoCategoriaaList (ListView):
+    # model = models.ProductoCategoriaa
 
 # Crear Producto
 

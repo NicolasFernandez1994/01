@@ -1,0 +1,27 @@
+{% extends 'Home/base.html' %}
+
+{% block TITULO %}
+    Búsquedas
+{% endblock TITULO %}
+
+
+{% block CONTENIDO %}
+
+    <h2> Customer nombre</h2>
+    {% for customer in customer_nombre %}
+        <p>{{ customer }}</p>
+    {% endfor %}
+
+    <h2> Customer nacimiento </h2>
+    {% for customer in customer_nacimiento %}
+        <p> {{ customer }}</p>
+    {% endfor %}
+
+    <h2> Customer dni </h2>
+    {% for customer in customer_dni %}
+        <p> {{ customer }}</p>
+    {% endfor %}
+
+    <a href="{% url 'Home:home' %}">Ir al menú principal</a>
+
+{% endblock CONTENIDO %}
