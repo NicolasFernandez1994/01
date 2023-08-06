@@ -10,9 +10,9 @@
         {% for categoria in objects_list  %}
             <ul> 
                 <li>{{ categoria.articulo }}
-                    <a href="{% url 'customer:03detail_customer' categoria.id %}">Ver Detalle</a>
-                    <a href="{% url 'customer:01crear_customer' categoria.id %}">Actualizar Producto</a>
-                    <a href="{% url 'customer:05delete_customer' categoria.id %}">ELIMINAR</a>
+                    <a class="btn btn-primary" href="{% url 'customer:03detail_customer' categoria.id %}">Ver Detalle</a>
+                    <a class="btn btn-primary" href="{% url 'customer:01crear_customer' categoria.id %}">Actualizar Producto</a>
+                    <a class="btn btn-primary" href="{% url 'customer:05delete_customer' categoria.id %}">ELIMINAR</a>
                 </li>
             </ul>
             
