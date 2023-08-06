@@ -4,27 +4,27 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="{% url 'Home:home' %}">Home</a></li>
+                <li class="nav-item"><a class="nav-link {% if request.path == '/' %} active {% endif %}" href="{% url 'Home:home' %}">Home</a></li>
                 
                 {% if user.is_authenticated: %}
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                        <li><a class="dropdown-item" href="{% url 'productoscompra:home' %}">Compra</a></li>
-                        <li><a class="dropdown-item" href="{% url 'productosventa:home' %}">Venta</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#!">WORK</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'customer:home' %}">Customer</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">Show Plus</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'producto:home' %}">Producto</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'faq:home' %}">FAQ</a></li>
-                <li class="nav-item"><a class="nav-link text-bg-info">Logout</a> {{ user.username }} </li> 
-                <li class="nav-item"><a class="nav-link text-bg-info fw-bold" href="{% url 'Home:logout' %}">Logout</a></li>        
+                    <li class="nav-item dropdown">
+                        <a class="nav-link {% if request.path == '/Productos/' %} active {% endif %} dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
+                            <li><a class="dropdown-item" href="{% url 'productoscompra:home' %}">Compra</a></li>
+                            <li><a class="dropdown-item" href="{% url 'productosventa:home' %}">Venta</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == '/work/' %} active {% endif %}" href="#!">WORK</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == '/customer/' %} active {% endif %}" href="{% url 'customer:home' %}">Customer</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == '/showplus/' %} active {% endif %}" href="#!">Show Plus</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == '/producto/' %} active {% endif %}" href="{% url 'producto:home' %}">Producto</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == '/faq/' %} active {% endif %}" href="{% url 'faq:home' %}">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link text-bg-info"> Logout </a> {{ user.username }} </li> 
+                    <li class="nav-item"><a class="nav-link text-bg-info fw-bold" href="{% url 'Home:logout' %}">Logout</a></li>        
                 {% else %}
-                <li class="nav-item"><a class="nav-link" href="{% url 'Nosotros:home' %}">Nosotros</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'faq:home' %}">FAQ</a></li>
-                <li class="nav-item"><a class="nav-link text-bg-info fw-bold" href="{% url 'Home:login' %}">Login</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == '/Nosotros/' %} active {% endif %}" href="{% url 'Nosotros:home' %}">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link {% if request.path == '/faq/' %} active {% endif %}" href="{% url 'faq:home' %}">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link text-bg-info fw-bold" href="{% url 'Home:login' %}">Login</a></li>
                 {% endif %}
             </ul>
         </div>

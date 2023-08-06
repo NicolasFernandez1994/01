@@ -23,10 +23,6 @@ def login_request(request: HttpRequest) -> HttpResponse:
             if user is not None:
                 login(request, user)
                 return render(request, "Home/index.html", {"mensaje": "Sesion iniciada correctamente"})
-            else:
-                return render(request, "Home/login.html", {"mensaje": "Usuario o contraseña incorrectos"})
-        else:
-            return render(request, "Home/login.html", {"mensaje": "Formulario incorrecto"})
     else:
         form = AuthenticationForm()
     return render(request, "Home/login.html", {"form": form})
