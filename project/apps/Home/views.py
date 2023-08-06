@@ -1,3 +1,4 @@
+from django.contrib.admin.views.decorators import staff_member_required
 from audioop import reverse
 from django.http import HttpResponse
 from django.http.request import HttpRequest
@@ -11,6 +12,8 @@ from . import forms
 
 def home(request):
     return render(request, "Home/index.html")
+
+#! LOGIN
 
 
 def login_request(request: HttpRequest) -> HttpResponse:
@@ -26,3 +29,18 @@ def login_request(request: HttpRequest) -> HttpResponse:
     else:
         form = AuthenticationForm()
     return render(request, "Home/login.html", {"form": form})
+
+#! REGISTER
+
+
+@staff_member_required
+def register(request: HttpRequest) -> HttpResponse:
+    if request.method == "POST":
+        form = forms.CustomUserCreationForm(request.POST)
+        if form.is_valid():
+            usuario = form.cleaned_data.get("username")
+            form.save()
+            return render(request, "Home/index.html", {"mensaje": "Usuario Creado correctamente"})
+    else:
+        form = AuthenticationForm()
+    return render(request, "Home/register.html", {"form": form})

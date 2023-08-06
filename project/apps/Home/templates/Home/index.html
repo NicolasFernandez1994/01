@@ -9,7 +9,24 @@
 
     {% block INDEX_CONTENIDO %}
         
-        {{ mensaje }}
+        {% if user.is_authenticated %}
+            {{ mensaje }}
+            <h3> Bienvenido {{ user.username }}</h3>
+        {% endif %}
+
+        {% if user.is_staff %}
+            {{ mensaje }}
+            <div class="fs-5 text-center fst-italic mt-5">
+                <h3> Bienvenido {{ user.username }} /h3>
+            </div>
+            <div class="row"> 
+                <a href="{% url 'admin:index' %}" class="btn btn text-bg-dark">Panel de administracion</a>
+            </div>
+            <div class="row"> 
+                <a href="{% url 'Home:register' %}" class="btn btn text-bg-dark" >Registrar nuevo usuario</a>
+            </div>
+        {% endif %}
+
         <!-- Header-->
         <header class="bg-dark py-5">
             {% include 'Home/02header.html' %}

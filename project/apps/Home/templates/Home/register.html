@@ -1,7 +1,7 @@
 {% extends 'Home/index.html' %}
 
 {% block INDEX_TITULO  %}  
-Login
+Registro de usuario
 {% endblock INDEX_TITULO  %}
 
 {% block INDEX_CONTENIDO %}
@@ -10,7 +10,7 @@ Login
         {% csrf_token %}
         {{ form.as_p }}
         <div class="d-grid gap-3 mt-3">
-            <button type="submit" class="btn btn text-bg-dark" > INICIAR SESION </button>
+            <button type="submit" class="btn btn text-bg-dark"> REGISTRAR NUEVO USUARIO </button>
         </div>
     </form>
 
