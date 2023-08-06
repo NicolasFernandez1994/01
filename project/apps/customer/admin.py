@@ -1,7 +1,14 @@
+from . import models
 from django.contrib import admin
-from django.db import models
 
 # Register your models here.
-from .models import Customer
+admin.site.site_title = "customer"
+# admin.site.register(Customer, CustomerAdmin)
 
-admin.site.register(Customer)
+
+@admin.register(models.Customer)
+class CustomerAdmin(admin.ModelAdmin):
+    list_display = ("name", "lastname", "phone",
+                    "email", "dni", "numero_cliente")
+    # list_filter = ()
+    search_fields = ("name", "lastname", "dni")

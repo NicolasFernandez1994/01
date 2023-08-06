@@ -1,15 +1,20 @@
+from re import U
 from django.db import models
 
-from pyexpat import model
-from django.db import models
+# Create your models here.
+
 
 class Customer(models.Model):
-    nombre = models.CharField(max_length=50)
-    apellido = models.CharField(max_length=50)
-    nacimiento = models.DateField()
+    name = models.CharField(max_length=40, )
+    lastname = models.CharField(max_length=40, )
+    phone = models.CharField(max_length=20, unique=True)
+    email = models.CharField(max_length=50, unique=True)
+    date_created = models.DateTimeField(auto_now_add=True, )
     dni = models.CharField(max_length=8, unique=True)
-    numero_customer = models.AutoField(primary_key=True, unique=True)
+    numero_cliente = models.CharField(max_length=5, unique=True)
 
     def __str__(self):
-        return f"{self.nombre} {self.apellido}"
-    
+        return self.name
+
+    class Meta:
+        verbose_name = 'customer'
