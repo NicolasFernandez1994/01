@@ -12,3 +12,4 @@ class CustomerAdmin(admin.ModelAdmin):
                     "email", "dni", "numero_cliente")
     # list_filter = ()
     search_fields = ("name", "lastname", "dni")
+    ordering = ("name",)
