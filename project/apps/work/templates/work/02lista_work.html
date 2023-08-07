@@ -1,4 +1,4 @@
-{% extends 'showplus/index.html' %}
+{% extends 'work/index.html' %}
 {% load static %}
 
 {% block INDEX_TITULO %} 
@@ -10,9 +10,9 @@
         {% for categoria in objects_list  %}
             <ul> 
                 <li>{{ categoria.articulo }}
-                    <a class="btn btn-primary" href="{% url 'showplus:03detail_showplus' categoria.id %}">Ver Detalle</a>
-                    <a class="btn btn-primary" href="{% url 'showplus:01crear_showplus' categoria.id %}">Actualizar Producto</a>
-                    <a class="btn btn-primary" href="{% url 'showplus:05delete_showplus' categoria.id %}">ELIMINAR</a>
+                    <a class="btn btn-primary" href="{% url 'work:03detail_work' categoria.id %}">Ver Detalle</a>
+                    <a class="btn btn-primary" href="{% url 'work:01crear_work' categoria.id %}">Actualizar Work</a>
+                    <a class="btn btn-primary" href="{% url 'work:05delete_work' categoria.id %}">ELIMINAR</a>
                 </li>
             </ul>
             

@@ -1,0 +1,26 @@
+{% extends 'work/index.html' %}
+{% load static %}
+
+{% block INDEX_TITULO %} 
+{% endblock INDEX_TITULO %}
+
+{% block INDEX_CONTENIDO %}
+
+<!-- work/agregar_work.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Work</title>
+</head>
+<body>
+    <h1>Agregar Work</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Agregar Work</button>
+    </form>
+</body>
+</html>
+
+<a href="{% url 'Home:home' %}"> Menu Principal </a>
+{% endblock INDEX_CONTENIDO %}

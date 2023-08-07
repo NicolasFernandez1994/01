@@ -1,0 +1,17 @@
+{% extends 'work/index.html' %}
+
+{% block INDEX_TITULO %} 
+   ELIMINAR Work
+{% endblock INDEX_TITULO %}
+
+{% block INDEX_CONTENIDO %}
+
+    <p class="fs-6 fst-italic">¿Confirmar ELiminar? {{ object }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit class="btn btn-danger">ELIMINAR</button>
+    </form>
+    
+    <a href="{% url 'Home:home' %}"> Menu Principal </a>
+
+{% endblock INDEX_CONTENIDO %}

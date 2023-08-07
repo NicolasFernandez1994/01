@@ -25,7 +25,7 @@ def agregar_showplus(request):
             return redirect('showplus:agregar')
     else:
         form = ShowplusForm()
-    return render(request, 'showplus/agregar_showplus.html', {'form': form})
+    return render(request, 'showplus/01agregar_showplus.html', {'form': form})
 
 # LISTA SHOWPLUS
 
