@@ -12,6 +12,6 @@
     Producto : Son algunos productos de los que ofrece la empresa 
 5 . tambien se puede ingresar en la seccion administrador entrando en el siguiente enlace
     http://127.0.0.1:8000/admin
-    donde usuario es: Nico
+    donde usuario principal es: Nico
     contraseña : 1234
 6 . En la seccion admin se pueden agregar , quitar clientes 
