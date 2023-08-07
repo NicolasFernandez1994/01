@@ -7,9 +7,9 @@ from . import models
 from . import forms
 
 # Pagina principal
-# def index(request):
-# contexto = {"app": "customer"}
-# return render(request, "customer/index.html", contexto)
+def home(request):
+     contexto = {"app": "customer"}
+     return render(request, "customer/index.html", contexto)
 
 # Lista Cliente
 

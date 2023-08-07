@@ -6,3 +6,4 @@ class ShowplusForm(forms.ModelForm):
     class Meta:
         model = Showplus
         fields = ['nombre', 'apellido', 'telefono', 'descripcion', 'precio', 'imagen']
+
