@@ -8,17 +8,34 @@
     {% if objects_list %}
 
         {% for categoria in objects_list  %}
-            <ul> 
-                <li>{{ categoria.articulo }}
-                    <a class="btn btn-primary" href="{% url 'customerx:03detail_customerx' categoria.id %}">Ver Detalle</a>
-                    <a class="btn btn-primary" href="{% url 'customerx:01crear_customerx' categoria.id %}">Actualizar Cliente</a>
-                    <a class="btn btn-primary" href="{% url 'customerx:05delete_customerx' categoria.id %}">ELIMINAR</a>
-                </li>
+            <ul>
+                <section class="bg-light py-3">
+                     <div class="container px-3 my-3">
+                         <div class="text-center mb-3">
+                             <li>  {{ categoria.name }} {{ categoria.lastname }} {{ categoria.numero_cliente }} 
+                                <a class="btn btn-primary" href="{% url 'customerx:03detail_customerx' categoria.id %}">Ver Detalle</a>
+                                <a class="btn btn-primary" href="{% url 'customerx:01crear_customerx' categoria.id %}">Actualizar Cliente</a>
+                                <a class="btn btn-primary" href="{% url 'customerx:05delete_customerx' categoria.id %}">ELIMINAR</a>
+                            </li>
+                         </div>
+                     </div>
+                 </section>
             </ul>
             
         {% endfor %}
         
     {% endif %}
-
-    <a class="btn btn-primary" href="{% url 'Home:home' %}"> Menu Principal </a>
+    <section class="bg-light py-2">
+        <div class="container px-2 my-2">
+            <div class="mb-2">
+                <a class="btn btn-primary" href="{% url 'customerx:home' %}"> ir atras </a>
+            </div>
+        </div>
+    </section><section class="bg-light py-2">
+        <div class="container px-2 my-2">
+            <div class="mb-2">
+                <a class="btn btn-primary" href="{% url 'Home:home' %}"> Menu Principal </a>
+            </div>
+        </div>
+    </section>
 {% endblock INDEX_CONTENIDO %}

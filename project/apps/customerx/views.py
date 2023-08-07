@@ -7,9 +7,11 @@ from . import models
 from . import forms
 
 # Pagina principal
+
+
 def home(request):
-     contexto = {"app": "customerx"}
-     return render(request, "customerx/index.html", contexto)
+    contexto = {"app": "customerx"}
+    return render(request, "customerx/index.html", contexto)
 
 # Lista Cliente
 
@@ -54,6 +56,7 @@ def update_customerx(request, pk):
     return render(request, "customerx/01crear_customerx.html", {"form": form})
 
 # Borrar Cliente
+
 
 def delete_customerx(request: HttpRequest, pk: int) -> HttpResponse:
     query = models.Customerx.objects.get(id=pk)
