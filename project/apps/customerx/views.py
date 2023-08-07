@@ -1,7 +1,9 @@
+from typing import Any
 from unicodedata import category
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
 from django.views.generic import ListView
+from django.db.models import QuerySet
 # Create your views here.
 from . import models
 from . import forms
@@ -20,6 +22,20 @@ def list_customerx(request):
     categorias = models.Customerx.objects.all()
     context = {"objects_list": categorias}
     return render(request, "customerx/02lista_customerx.html", context)
+
+
+class CustomerxListView(ListView):
+    model = models.Customerx
+
+    # def get_queryset(self) -> QuerySet[Any]:
+    # if self.request.GET.get("consulta"):
+    # consulta = self.request.GET.get("consulta")
+    # obejcts_list = models.Customerx.objects.filter(
+    # nombre__icontains=consulta)
+    # else:
+    # obejcts_list = models.Customerx.objects.all()
+    # return obejcts_list
+
 
 # Crear Cliente
 
