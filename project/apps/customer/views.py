@@ -7,11 +7,13 @@ from django.views.generic import ListView
 from . import models
 from . import forms
 
-#def home(request):
-    #contexto = {"app": "customer"}
-    #return render(request, "customer/index.html", contexto)
+# def home(request):
+# contexto = {"app": "customer"}
+# return render(request, "customer/index.html", contexto)
 
 # Lista Cliente
+
+
 def list_customer(request):
     categorias = models.Customer.objects.all()
     context = {"objects_list": categorias}
@@ -21,6 +23,8 @@ def list_customer(request):
     # model = models.ProductoCategoriaa
 
 # Crear Cliente
+
+
 def create_customer(request):
     if request.method == "POST":
         form = forms.CustomerForm(request.POST)
@@ -32,6 +36,8 @@ def create_customer(request):
     return render(request, "customer/01crear_customer.html", {"form": form})
 
 # Detalles Cliente
+
+
 def detail_customer(request, pk):
     query = models.Customer.objects.get(id=pk)
     return render(request, "customer/03detail_customer.html", {"object": query})
@@ -51,6 +57,8 @@ def update_customer(request, pk):
     return render(request, "customer/01crear_customer.html", {"form": form})
 
 # Borrar Cliente
+
+
 def delete_customer(request: HttpRequest, pk: int) -> HttpResponse:
     query = models.Customer.objects.get(id=pk)
     if request.method == "POST":
