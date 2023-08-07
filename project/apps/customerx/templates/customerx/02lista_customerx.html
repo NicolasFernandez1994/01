@@ -1,0 +1,24 @@
+{% extends 'customerx/index.html' %}
+{% load static %}
+
+{% block INDEX_TITULO %} 
+{% endblock INDEX_TITULO %}
+
+{% block INDEX_CONTENIDO %}
+    {% if objects_list %}
+
+        {% for categoria in objects_list  %}
+            <ul> 
+                <li>{{ categoria.articulo }}
+                    <a class="btn btn-primary" href="{% url 'customerx:03detail_customerx' categoria.id %}">Ver Detalle</a>
+                    <a class="btn btn-primary" href="{% url 'customerx:01crear_customerx' categoria.id %}">Actualizar Cliente</a>
+                    <a class="btn btn-primary" href="{% url 'customerx:05delete_customerx' categoria.id %}">ELIMINAR</a>
+                </li>
+            </ul>
+            
+        {% endfor %}
+        
+    {% endif %}
+
+    <a href="{% url 'Home:home' %}"> Menu Principal </a>
+{% endblock INDEX_CONTENIDO %}

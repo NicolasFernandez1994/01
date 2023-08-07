@@ -32,5 +32,5 @@ urlpatterns = [
     path("blog01JM/", include("blog01JM.urls")),
     path("blog02EH/", include("blog02EH.urls")),
     path("blog03PC/", include("blog03PC.urls")),
-    path("customer/", include("customer.urls")),
+    path("customerx/", include("customerx.urls")),
 ]
