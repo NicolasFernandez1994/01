@@ -5,13 +5,31 @@
 {% endblock INDEX_TITULO %}
 
 {% block INDEX_CONTENIDO %}
-
-    <p class="fs-6 fst-italic">¿Confirmar ELiminar? {{ object }}</p>
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit class="btn btn-danger">ELIMINAR</button>
-    </form>
+<section class="bg-light py-3">
+    <div class="container px-3 my-3">
+        <div class="mb-3">
+            <p class="fs-6 fst-italic">¿Confirmar ELiminar? {{ object }}</p>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit class="btn btn-danger">ELIMINAR</button>
+            </form>
+        </div>
+    </div>
+</section>
     
-    <a class="btn btn-primary" href="{% url 'Home:home' %}"> Menu Principal </a>
+<section class="bg-light py-2">
+    <div class="container px-2 my-2">
+        <div class="mb-2">
+            <a class="btn btn-primary" href="{% url 'showplus:02lista_showplus' %}"> Ir atras </a>
+        </div>
+    </div>
+</section>
+<section class="bg-light py-2">
+    <div class="container px-2 my-2">
+        <div class="mb-2">
+            <a class="btn btn-primary" href="{% url 'Home:home' %}"> Menu Principal </a>
+        </div>
+    </div>
+</section>
 
 {% endblock INDEX_CONTENIDO %}

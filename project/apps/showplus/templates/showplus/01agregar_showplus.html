@@ -6,21 +6,38 @@
 
 {% block INDEX_CONTENIDO %}
 
-<!-- productos/agregar_producto.html -->
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Agregar Showplus</title>
-</head>
-<body>
-    <h1>Agregar Producto</h1>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Agregar Producto</button>
-    </form>
-</body>
-</html>
+<section class="bg-light py-3">
+    <div class="container px-3 my-3">
+        <div class="text-center mb-3"><html>
+            html>
+            <head>
+                <title>Agregar Showplus</title>
+            </head>
+            <body>
+                <h1>Agregar Producto</h1>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Agregar Producto</button>
+                </form>
+            </body>
+            </html>
+        </div>
+    </div>
+</section>
 
-<a class="btn btn-primary" href="{% url 'Home:home' %}"> Menu Principal </a>
+<section class="bg-light py-2">
+    <div class="container px-2 my-2">
+        <div class="mb-2">
+            <a class="btn btn-primary" href="{% url 'showplus:home' %}"> ir atras </a>
+        </div>
+    </div>
+</section><section class="bg-light py-2">
+    <div class="container px-2 my-2">
+        <div class="mb-2">
+            <a class="btn btn-primary" href="{% url 'Home:home' %}"> Menu Principal </a>
+        </div>
+    </div>
+</section>
 {% endblock INDEX_CONTENIDO %}

@@ -7,14 +7,34 @@
 {% block INDEX_CONTENIDO %}
 
     <ul> 
-        <li>Nombre : {{ object.nombre }}</li>
-        <li>Apellido : {{ object.apellido }}</li>
-        <li>Telefono : {{ object.telefono }}</li>
-        <li>Descripcion: {{ object.descripcion }}</li>
-        <li>Precio: {{ object.precio }}</li>
-        <li>Imagen: {{ object.imagen }}</li>
+        <section class="bg-light py-3">
+            <div class="container px-3 my-3">
+                <div class="mb-3">
+                    <li>Nombre : {{ object.nombre }}</li>
+                    <li>Apellido : {{ object.apellido }}</li>
+                    <li>Telefono : {{ object.telefono }}</li>
+                    <li>Descripcion: {{ object.descripcion }}</li>
+                    <li>Precio: {{ object.precio }}</li>
+                    <li>Imagen: {{ object.imagen }}</li>
+                </div>
+            </div>
+        </section>
     </ul>
 
-    <a class="btn btn-primary" href="{% url 'Home:home' %}"> Menu Principal </a>
+    <section class="bg-light py-2">
+        <div class="container px-2 my-2">
+            <div class="mb-2">
+                <a class="btn btn-primary" href="{% url 'showplus:02lista_showplus' %}"> Ir atras </a>
+            </div>
+        </div>
+    </section>
+    <section class="bg-light py-2">
+        <div class="container px-2 my-2">
+            <div class="mb-2">
+                <a class="btn btn-primary" href="{% url 'Home:home' %}"> Menu Principal </a>
+            </div>
+        </div>
+    </section>
+
 
 {% endblock INDEX_CONTENIDO %}
