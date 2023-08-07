@@ -16,5 +16,5 @@ admin.site.site_title = "Showplus"
 @admin.register(models.Showplus)
 class ShowplusAdmin(admin.ModelAdmin):
     list_display = ("nombre", "apellido", "telefono", "descripcion", "precio")
-    list_filter = ("nombre")
-    search_fields = ("nombre")
+    # list_filter = ("nombre")
+    # search_fields = ("nombre")
