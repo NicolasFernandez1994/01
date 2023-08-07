@@ -11,7 +11,7 @@
             <ul> 
                 <li>{{ categoria.articulo }}
                     <a class="btn btn-primary" href="{% url 'work:03detail_work' categoria.id %}">Ver Detalle</a>
-                    <a class="btn btn-primary" href="{% url 'work:01crear_work' categoria.id %}">Actualizar Work</a>
+                    <a class="btn btn-primary" href="{% url 'work:01agregar_work' categoria.id %}">Actualizar Work</a>
                     <a class="btn btn-primary" href="{% url 'work:05delete_work' categoria.id %}">ELIMINAR</a>
                 </li>
             </ul>
@@ -20,5 +20,5 @@
         
     {% endif %}
 
-    <a href="{% url 'Home:home' %}"> Menu Principal </a>
+    <a class="btn btn-primary" href="{% url 'Home:home' %}"> Menu Principal </a>
 {% endblock INDEX_CONTENIDO %}

@@ -17,7 +17,7 @@
         {% if user.is_staff %}
             {{ mensaje }}
             <div class="fs-5 text-center fst-italic mt-5">
-                <h3> Bienvenido {{ user.username }} /h3>
+                <h3> {{ user.username }} <h3>
             </div>
             <div class="row"> 
                 <a href="{% url 'admin:index' %}" class="btn btn text-bg-dark">Panel de administracion</a>

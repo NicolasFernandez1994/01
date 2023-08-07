@@ -11,7 +11,7 @@
             <ul> 
                 <li>{{ categoria.articulo }}
                     <a class="btn btn-primary" href="{% url 'showplus:03detail_showplus' categoria.id %}">Ver Detalle</a>
-                    <a class="btn btn-primary" href="{% url 'showplus:01crear_showplus' categoria.id %}">Actualizar Producto</a>
+                    <a class="btn btn-primary" href="{% url 'showplus:01agregar_showplus' categoria.id %}">Actualizar Producto</a>
                     <a class="btn btn-primary" href="{% url 'showplus:05delete_showplus' categoria.id %}">ELIMINAR</a>
                 </li>
             </ul>
@@ -20,5 +20,5 @@
         
     {% endif %}
 
-    <a href="{% url 'Home:home' %}"> Menu Principal </a>
+    <a class="btn btn-primary" href="{% url 'Home:home' %}"> Menu Principal </a>
 {% endblock INDEX_CONTENIDO %}

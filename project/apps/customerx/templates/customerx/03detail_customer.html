@@ -12,10 +12,9 @@
         <li>DNI : {{ object.dni }}</li>
         <li>Telefono : {{ object.phone }}</li>
         <li>Email : {{ object.email }}</li>
-        <li>Año de nacimiento: {{ object.date_created }}</li>
         <li>Numero de cliente: {{ object.numero_cliente }}</li>
     </ul>
 
-    <a href="{% url 'Home:home' %}"> Menu Principal </a>
+    <a class="btn btn-primary" href="{% url 'Home:home' %}"> Menu Principal </a>
 
 {% endblock INDEX_CONTENIDO %}
