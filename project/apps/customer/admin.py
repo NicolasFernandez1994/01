@@ -8,7 +8,7 @@ admin.site.site_title = "customer"
 
 @admin.register(models.Customer)
 class CustomerAdmin(admin.ModelAdmin):
-    list_display = ("name", "lastname", "phone",
+    list_display = ("name", "lastname",
                     "email", "dni", "numero_cliente")
     # list_filter = ()
     search_fields = ("name", "lastname", "dni")

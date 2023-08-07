@@ -1,0 +1,26 @@
+{% extends 'showplus/index.html' %}
+{% load static %}
+
+{% block INDEX_TITULO %} 
+{% endblock INDEX_TITULO %}
+
+{% block INDEX_CONTENIDO %}
+
+<!-- productos/agregar_producto.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Showplus</title>
+</head>
+<body>
+    <h1>Agregar Producto</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Agregar Producto</button>
+    </form>
+</body>
+</html>
+
+<a href="{% url 'Home:home' %}"> Menu Principal </a>
+{% endblock INDEX_CONTENIDO %}

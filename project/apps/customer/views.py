@@ -1,4 +1,3 @@
-
 from unicodedata import category
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import redirect, render
@@ -7,7 +6,8 @@ from django.views.generic import ListView
 from . import models
 from . import forms
 
-# def home(request):
+# Pagina principal
+# def index(request):
 # contexto = {"app": "customer"}
 # return render(request, "customer/index.html", contexto)
 

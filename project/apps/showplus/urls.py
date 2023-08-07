@@ -1,10 +1,11 @@
 from django.urls import path
-
-from .views import home
+from . import views
+# from .views import home
 
 app_name = "showplus"
 
 
 urlpatterns = [
-    path("", home, name="home"),
+    path("", views.home, name="home"),
+    path("", views.agregar_showplus, name="home"),
 ]

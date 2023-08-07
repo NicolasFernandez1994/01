@@ -7,7 +7,6 @@ from django.db import models
 class Customer(models.Model):
     name = models.CharField(max_length=40, )
     lastname = models.CharField(max_length=40, )
-    phone = models.CharField(max_length=20, unique=True)
     email = models.CharField(max_length=50, unique=True)
     date_created = models.DateTimeField(auto_now_add=True, )
     dni = models.CharField(max_length=8, unique=True)
