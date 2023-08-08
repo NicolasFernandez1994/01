@@ -7,9 +7,10 @@
 4 . Se puede navegar en las diferentes pantalles de la parte superior donde:
     Home : pantalla de inicio
     About : habla de la empresa
-    Cliente : Muestra los clientes
     FAQ : son las preguntas frecuentes y el contacto de la empresa
-    Producto : Son algunos productos de los que ofrece la empresa 
+    showplus : es un espacio de compra y venta de autos
+    work: es un espacio donde se deja una publicacion de un trabajo
+    Producto (compra y venta): Son algunos productos de los que ofrece y que compra la empresa 
 5 . tambien se puede ingresar en la seccion administrador entrando en el siguiente enlace
     http://127.0.0.1:8000/admin
     donde usuario principal es: Nico
