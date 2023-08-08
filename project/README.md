@@ -14,7 +14,7 @@ Al loguearse en la pagina se abren otras secciones como los son la app "showplus
 . En la base de datos aparecen viejas apps creadas que fueron modificadas o eliminadas. Pero no afectan el funcionamiento de la pagina.
 ## Futuras mejoras
 . Se podrian mejorar los blogs, la idea principal era que parecieran de paginas externas, por una cuestion de tiempo, se hicieron los blogs pero se asemejan a la pagina de la distribuidora.
-. En la seccion productos, se podria seleccionar una categoria de productos y que se muestren todos los productos con su descripcion, al ser mas de 10.000 solo se dejo la lista de precios ya creada. Ademas crearia una especie de "tienda virtual" donde la gente pueda agregar un producto al carrito, se compren, se paguen y se envien a todos los puntos del pais.
+. En la seccion productos, se podria seleccionar una categoria de productos y que se muestren todos los productos con su descripcion, al ser mas de 10.000 solo se dejo la lista de precios ya creada. Ademas crearia una especie de "tienda virtual" donde la gente pueda agregar un producto al carrito, se compren, se paguen y se envien a todos los puntos del pais. (se dejo en el proyecto una app "producto" para encarar esta mejora)
 . Mejoraria la parte del front de las apps "work" y "showplus" si bien en un comienzo son gratuitas , en el caso que se vuelva popular y a las personas le funcionan, se cobrara una mensualidad en el caso de "work" por mantener el posteo del servicio y en el caso de "showplus" se cobrara por postear y ofrecer un auto.
 . Reforzaria la seguridad de la pagina para que no sea facil de hackear.
 . En algunas partes de la pagina pondria imagenes animadas con el fin de que sea mas agradable a la vista.
