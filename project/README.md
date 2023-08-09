@@ -18,3 +18,6 @@ Al loguearse en la pagina se abren otras secciones como los son la app "showplus
 . Mejoraria la parte del front de las apps "work" y "showplus" si bien en un comienzo son gratuitas , en el caso que se vuelva popular y a las personas le funcionan, se cobrara una mensualidad en el caso de "work" por mantener el posteo del servicio y en el caso de "showplus" se cobrara por postear y ofrecer un auto.
 . Reforzaria la seguridad de la pagina para que no sea facil de hackear.
 . En algunas partes de la pagina pondria imagenes animadas con el fin de que sea mas agradable a la vista.
+
+## Video de presentacion de la pagina
+(hay un video de presentacion de la pagina dentro de la carpeta media)

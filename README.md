@@ -16,3 +16,4 @@
     donde usuario principal es: Nico
     contraseña : 1234
 6 . En la seccion admin se pueden agregar , quitar clientes 
+(hay un video de presentacion de la pagina dentro de la carpeta media)
